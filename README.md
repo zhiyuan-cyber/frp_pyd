@@ -5,7 +5,7 @@ user pyd remote any computer or server
 
 如何使用？
 
-在pyd目录下，使用cmd命令调用（内存占用极小）：
+在pyd文件所在的目录下，使用cmd命令调用（内存占用极小）：
 
 1.提供远程的服务端：
 python -c "import asyncio,frps;asyncio.run(frps.main('0.0.0.0',8800,'0.0.0.0',8801))"
