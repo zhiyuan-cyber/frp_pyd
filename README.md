@@ -1,6 +1,6 @@
 # frp_pyd
 
-user pyd remote any computer or server 
+use frp pyd remote any computers or servers 
 
 
 如何使用？
