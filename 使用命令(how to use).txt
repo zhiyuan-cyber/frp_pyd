@@ -1,0 +1,11 @@
+在“程序”目录下调用：
+提供远程的服务端：
+python -c "import asyncio,frps;asyncio.run(frps.main('0.0.0.0',8800,'0.0.0.0',8801))"
+
+被远程的客户端：
+python -c "import asyncio,frpc;asyncio.run(frpc.main('124.221.146.69',8800,'localhost',3389))"
+
+python版本：3.14.X
+
+
+发起远程的电脑：124.221.146.69:8801
