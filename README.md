@@ -1,4 +1,4 @@
-# frp_pyd
+# frp_pyd（Python版 frp 实现远程穿透）
 
 use frp pyd remote any computers or servers 
 
