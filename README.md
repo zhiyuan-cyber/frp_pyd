@@ -8,15 +8,25 @@ use frp pyd remote any computers or servers
 在pyd文件所在的目录下，使用cmd命令调用：
 
 
-1.提供远程的服务端（目录下得有frps.pyd）：
+1.提供远程的服务端（目录下得有frps.pyd），cmd输入：
+
+
 python -c "import asyncio,frps;asyncio.run(frps.main('0.0.0.0',8800,'0.0.0.0',8801))"
 
 
-2.被远程的客户端（目录下得有frpc.pyd）：
+2.被远程的客户端（目录下得有frpc.pyd）（假设提供远程的服务端IP为：124.221.146.69），cmd输入：
+
+
 python -c "import asyncio,frpc;asyncio.run(frpc.main('124.221.146.69',8800,'localhost',3389))"
 
 
-3.发起远程的电脑：124.221.146.69:8801
+3.发起远程的电脑：
+
+用微软的rdp（远程桌面软件）输入:
+
+124.221.146.69:8801
+
+完成访问
 
 
 4.python版本：3.14.X（X86-64、AMD）
