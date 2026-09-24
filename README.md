@@ -7,15 +7,20 @@ use frp pyd remote any computers or servers
 
 在pyd文件所在的目录下，使用cmd命令调用（内存占用极小）：
 
-1.提供远程的服务端：
+
+1.提供远程的服务端（目录下得有frps.pyd）：
 python -c "import asyncio,frps;asyncio.run(frps.main('0.0.0.0',8800,'0.0.0.0',8801))"
 
-2.被远程的客户端：
+
+2.被远程的客户端（目录下得有frpc.pyd）：
 python -c "import asyncio,frpc;asyncio.run(frpc.main('124.221.146.69',8800,'localhost',3389))"
+
 
 3.发起远程的电脑：124.221.146.69:8801
 
+
 4.python版本：3.14.X（X86-64、AMD）
+
 
 5.已经实现前后端断线重连功能，服务端支持异常捕获处理，客户端支持重连。
 
@@ -23,7 +28,10 @@ python -c "import asyncio,frpc;asyncio.run(frpc.main('124.221.146.69',8800,'loca
 6.目前已支持多端口服务，一台服务器可以提供多个远程服务，可开服。
 
 
-7.后续计划：
+7.60fps注册表方便实现远程桌面达到60帧，方便快捷。
+
+
+8.后续计划：
 
 ①开源完整代码和编译脚本。
 
